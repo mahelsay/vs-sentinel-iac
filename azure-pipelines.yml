@@ -1,0 +1,23 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Visual Studio Enterprise Subscription (VS)(caf16bab-b20f-449e-a538-7a1882ce6d37)'
+    subscriptionId: 'caf16bab-b20f-449e-a538-7a1882ce6d37'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'vs-logaudit01'
+    location: 'West Europe'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/mahelsay/vs-sentinel-iac/main/detections/azuredeploy.json'
+    deploymentMode: 'Incremental'
