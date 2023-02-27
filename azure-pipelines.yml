@@ -19,5 +19,5 @@ steps:
     resourceGroupName: 'vs-logaudit01'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/mahelsay/vs-sentinel-iac/main/detections/azuredeploy.json?token=GHSAT0AAAAAAB7G436FVVQ5JDV2OMLW3SG2Y74VCAA'
+    csmFileLink: 'https://raw.githubusercontent.com/mahelsay/vs-sentinel-iac/main/detections/azuredeploy.json'
     deploymentMode: 'Incremental'
