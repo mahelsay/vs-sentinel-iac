@@ -3,7 +3,8 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "workspace": {
-            "type": "vs-la01"
+            "type": "String",
+            "defaultValue": "vs-la01"
         }
     },
     "resources": [
